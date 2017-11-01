@@ -1,0 +1,35 @@
+{
+  "name": "budgette",
+  "version": "1.0.0",
+  "description": "Simple tool to create personal budget projection",
+  "main": "index.js",
+  "bin": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0xx/budgette.git"
+  },
+  "keywords": [
+    "budget",
+    "personal",
+    "cli",
+    "projection"
+  ],
+  "author": "Maxime Morin <maxime.morin2@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m0xx/budgette/issues"
+  },
+  "homepage": "https://github.com/m0xx/budgette#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "jest": "^21.2.1",
+    "js-yaml": "^3.10.0",
+    "moment": "^2.19.1",
+    "moment-recur": "^1.0.7"
+  }
+}
