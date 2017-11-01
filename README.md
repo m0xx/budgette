@@ -9,11 +9,9 @@ npm install -g budgette
 
 # Getting Started
 
-Let's get started by creating a projection for the next year. 
-
 Let's say we have 250$ in our bank account, we have (1) customer who pay us 125$ / year for hosting service and we host his site on Digital Ocean for 5$ / month!
 
-What's our projection?
+So what's our projection for the next year?
 
 #### Create a file named `my-budget.yml` example:
 ```yaml
@@ -71,3 +69,23 @@ budgette -b my-budget.yaml --start 2017-01-01 --end 2017-12-31
 │ Digital Ocean        │ December 15, 2017  │ - 5 $   │ 315 $ │
 └──────────────────────┴────────────────────┴─────────┴───────┘
 ```
+
+# Budget file `yml`
+
+#### Structure
+
+    budgets
+     |-- description
+     |   date
+     |   every 
+     |   amount
+     |-- ...
+    
+#### Budget keys
+
+Key | Required | Description
+--- | -------- | -----------
+description | yes | Description of the budget
+date | yes | Start date, specify a valid moment format
+every | no | Define recurrence. Specify a format `interval type` where `interval` is an integer and type is one of `day(s), month(s), year(s)`. ie: `3 months`
+amount | yes | Integer corresponding to the amount to substract or add
