@@ -28,8 +28,8 @@ function parseMoment(v, memo) {
 
 program
     .option(
-        '-f, --file [file]',
-        `Specify file to load [${defaultFilePath}]`,
+        '-b, --budget [file]',
+        `Specify yaml budget file to load [${defaultFilePath}]`,
         defaultFilePath
     )
     .option(
@@ -46,7 +46,7 @@ program
     )
     .parse(process.argv);
 
-const filePath = program.file;
+const filePath = program.budget;
 
 try {
     fs.readFileSync(filePath);
