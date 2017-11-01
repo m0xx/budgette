@@ -1,6 +1,6 @@
 {
   "name": "budgette",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Simple tool to create personal budget projection",
   "main": "index.js",
   "bin": "./bin/index.js",
