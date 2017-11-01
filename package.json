@@ -30,6 +30,7 @@
     "jest": "^21.2.1",
     "js-yaml": "^3.10.0",
     "moment": "^2.19.1",
-    "moment-recur": "^1.0.7"
+    "moment-recur": "^1.0.7",
+    "rrule": "^2.2.0"
   }
 }

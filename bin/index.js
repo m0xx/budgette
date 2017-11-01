@@ -11,13 +11,15 @@ const budgette = require('./../lib');
 
 const defaultFilePath = path.join(process.cwd(), 'budgette.yaml');
 const defaultStart = moment().format('YYYY-MM-DD');
-const defaultEnd = moment().add(1, 'year').format('YYYY-MM-DD');
+const defaultEnd = moment()
+    .add(1, 'year')
+    .format('YYYY-MM-DD');
 
 function parseMoment(v, memo) {
     //TODO: better date format handling, error is ugly
-    const mDate = moment(v);
-    if(!mDate.isValid()) {
-        console.log(`Not a valid moment format: ${v}`)
+    const mDate = moment(v).utc();
+    if (!mDate.isValid()) {
+        console.log(`Not a valid moment format: ${v}`);
         process.exit(1);
     }
 
@@ -53,12 +55,12 @@ try {
     process.exit(1);
 }
 
-const mStart = moment(program.start);
-const mEnd = moment(program.end);
+const mStart = moment(program.start).utc();
+const mEnd = moment(program.end).utc();
 
 budgette.generateTransactions({
     loader: yamlLoader(filePath),
     renderer: consoleRenderer(),
     start: mStart.toDate(),
     end: mEnd.toDate()
-})
+});
